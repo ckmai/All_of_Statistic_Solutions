@@ -10,19 +10,16 @@ using Statistics
 
 function experiment(n::Int64, p::Float64)
     ω = rand(n)
-    cnt = 0
-    for elem in ω
-        if (elem <= p)
-            cnt += 1
-        end
-    end
-
+    cnt = count(<=(p), ω)
     Float64(cnt / n)
 end
-
 
 experiment_repeat = 100
 
 result_10 = (1:experiment_repeat .|> x -> experiment(10, 0.3)) |> mean
 result_100 = (1:experiment_repeat .|> x -> experiment(100, 0.3)) |> mean
 result_1000 = (1:experiment_repeat .|> x -> experiment(1000, 0.3)) |> mean
+
+println("Est[P(H)] at n = 10: ", result_10)
+println("Est[P(H)] at n = 100: ", result_100)
+println("Est[P(H)] at n = 1000: ", result_1000)

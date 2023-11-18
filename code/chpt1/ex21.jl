@@ -11,13 +11,7 @@ using Plots
 
 function experiment(n::Int64, p::Float64)
     ω = rand(n)
-    cnt = 0
-    for elem in ω 
-        if (elem <= p)
-            cnt += 1
-        end
-    end
-
+    cnt = count(<=(p), ω)
     Float64(cnt / n)
 end
 
