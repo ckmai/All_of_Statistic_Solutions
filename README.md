@@ -5,3 +5,4 @@ This is the solutions of the computer experiments of *All of Statistics* by L. W
 ## Timeline
 
 * 16/11/2023: Repo created.
+* 18/11/2023: Chapter 1 finished.
