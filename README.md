@@ -6,3 +6,4 @@ This is the solutions of the computer experiments of *All of Statistics* by L. W
 
 * 16/11/2023: Repo created.
 * 18/11/2023: Chapter 1 finished.
+* 22/11/2023: Chapter 2 finished.
